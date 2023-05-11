@@ -18,18 +18,23 @@ I split the data using train_test_split.  Then I used the LogisticRegression mod
 
 Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
 
-* Machine Learning Model 1:
-  * Description of Model 1 Accuracy, Precision, and Recall scores.
+* Machine Learning Model 1:  LogisticRegression
+  * Accuracy Score:  0.992
+  * Precision Score:  0:  1.00, 1:  0.87
+  * Recall Score:  0:  1.00, 1:  0.89
 
 
-
-* Machine Learning Model 2:
-  * Description of Model 2 Accuracy, Precision, and Recall scores.
-
+* Machine Learning Model 2:  LogisticRegression w/ resampled data
+  * Accuracy Score:  0.995
+  * Precision Score:  0:  1.00, 1:  0.87
+  * Recall Score:  0:  1.00, 1:  1.00
 ## Summary
 
 Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
 * Which one seems to perform best? How do you know it performs best?
+It seems that the second model performed better because it has a higher accuracy score.
 * Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
+However, the data is very imbalanced and tends to lean more toward healthy '0' loans.  So the model and predictions will follow suite and unfortunately grant more people loans than what the actual data would support.  The lender may then not receive repayment on some of those loans that were probably a 1 but the model predicted as 0.
 
 If you do not recommend any of the models, please justify your reasoning.
+I would not recommend either of these models to make these predictions.  I would gather more data and strive for a more balanced data set and rerun the models.
