@@ -5,9 +5,13 @@
 In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
 
 * Explain the purpose of the analysis.
+The purpose of this analysis was to use data to see if a borrower could be entrusted to pay back a loan.  If a borrower could be entrusted, the loan would be considered healthy or a 0.  If a borrower could not be trusted to repay the loan, it was deemed an unhealthy loan, or a 1.
 * Explain what financial information the data was on, and what you needed to predict.
+The data used to predict was the loan amount, the loan interest rate, the borrower's income, their debt to income ratio, their number of accounts, any derogatory marks, and their total debt.  Based on this data, we needed to predict if the borrower can be entrusted to repay the loan and have their loan be considered healthy.
 * Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
+We basically needed/wanted to know just how much data we have to work with and how balanced/imbalanced the data is.
 * Describe the stages of the machine learning process you went through as part of this analysis.
+I split the data using train_test_split.  Then I used the LogisticRegression model and fit it usig the training data.  Then made predictions based on that fit.  I calculated the accuracy score, generated a confusion matrix, and printed the classification report. I repeated those steps using resampled data using RandomOverSampler.  
 * Briefly touch on any methods you used (e.g., `LogisticRegression`, or any resampling method).
 
 ## Results
